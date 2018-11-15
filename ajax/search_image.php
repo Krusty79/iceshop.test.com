@@ -3,7 +3,7 @@
     $search = [];
     if(isset($_POST["search"]))
         $search["global"] = "%$_POST[search]%";
-    foreach(glob("./src/*.class.php") as $class){
+    foreach(glob("../src/*.class.php") as $class){
         require_once $class;
     }
     $attr = ['fields' => 'originalName,hash,CONCAT("http://'.$_SERVER['HTTP_HOST'].'","/",clientId,"/",hash) as link'];

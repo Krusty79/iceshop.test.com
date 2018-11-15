@@ -45,7 +45,7 @@
 					</div>
 				</div>
                 
-                <form name="search_image" action="/search_image.php" method="post">
+                <form name="search_image" action="/ajax/search_image.php" method="post">
                     <input type="hidden" name="clientId" value="client_1"/>
                     <div class="input-group">
                         <input 
@@ -206,7 +206,7 @@
                             data = new FormData($(this)[0]);
                             $.ajax({
                                 type: 'POST',
-                                url: './/search_image.php',
+                                url: '/ajax/search_image.php',
                                 data: data,
                                 cache: false,
                                 dataType : 'json',
