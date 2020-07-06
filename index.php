@@ -1,5 +1,4 @@
 <?php
-    echo "TEST";
 	foreach(glob("./src/*.class.php") as $class){
 	    require_once $class;
     }
